@@ -1,6 +1,7 @@
 package com.charlesdrews.usabilitytestinglab;
 
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -50,6 +51,7 @@ public class DetailFragment extends Fragment {
     }
 
     public void updateWebView(String selectedSign) {
+        mWebView.loadUrl(Uri.parse(URL_BEGINNING + selectedSign).toString());
         //TODO - look up how to load a URL in a webview
     }
 }
